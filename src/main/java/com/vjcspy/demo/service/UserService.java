@@ -30,7 +30,7 @@ public class UserService {
         // Save the user
         return userRepository.save(newUser);
     }
-
+    
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }

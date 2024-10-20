@@ -1,23 +1,26 @@
 package com.vjcspy.demo.entity;
 
 import jakarta.persistence.*;
+import java.util.UUID;
 
 @Entity
-@Table(name="user", schema="public")
+@Table(name = "user", schema = "public")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
+
     private String username;
     private String password;
     private String email;
 
-    public String getId() {
+    // Getters and setters
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
