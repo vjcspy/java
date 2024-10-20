@@ -16,14 +16,9 @@ tasks:
   up:
     desc: "Start containers"
     cmds:
-      - docker-compose -f /home/wsl/work/java/demo/docker/db/docker-compose.yaml up -d
+      - docker-compose -f /home/wsl/work/java/demo/docker/docker-compose.yaml up -d
 
   down:
     desc: "Stop containers"
     cmds:
-      - docker-compose -f /home/wsl/work/java/demo/docker/db/docker-compose.yaml down
-
-  build:
-    desc: "Build and start containers"
-    cmds:
-      - docker-compose -f /home/wsl/work/java/demo/docker/db/docker-compose.yaml up --build -d
+      - docker-compose -f /home/wsl/work/java/demo/docker/docker-compose.yaml down
