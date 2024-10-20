@@ -3,6 +3,7 @@ package com.vjcspy.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="user", schema="public")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
