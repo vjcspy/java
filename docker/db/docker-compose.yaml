@@ -7,11 +7,11 @@ services:
       dockerfile: Dockerfile
     container_name: node_prisma_db
     volumes:
-      - ./prisma:/app/prisma # Mount thư mục prisma
-      - ./package.json:/app/package.json # Mount thư mục prisma
+      - ./prisma:/app/prisma
+      - ./package.json:/app/package.json
     environment:
-      DATABASE_URL: ${DATABASE_URL} # Không cần dấu ':' ở đây
-    command: npx prisma migrate dev # Sửa lại lệnh chạy migration cho Prisma
+      DATABASE_URL: ${DATABASE_URL}
+    command: npx prisma migrate dev
     networks:
       - my-bridge-network
 
